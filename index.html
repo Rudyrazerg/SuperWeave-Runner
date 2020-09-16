@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SuperWeave Runner</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="trex-runner.css">
+    <script src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
+  </head>
+
+  <body id="main">
+
+    <div class="interstitial-wrapper">
+      <div>
+          <h2 class="fontb" id="supertitle">SuperWeave Runner</h2>
+          <h6 class="fontb">Play for free and get the highest score ! Instruction: Press key up and key down.</h6>
+          <span><button class="but fontb" id="savehighscore" style="height: 27px;" hidden>SAVE HIGH SCORE</button></span>
+          <span><input type="text" class="but" style="padding-top: 6px;" id="inputname"></span>
+          <span><button class="but fontb" id="setName" style="height: 27px;" onclick="savename()">SET NAME</button></span>
+
+      </div>
+
+    </div>
+    <div class="led">
+        <h5 class="fontb u">Leaderboard</h5>
+        <table class="fontb" style="font-size:12px;">
+        	<tbody id="setScores">
+        		<tr>
+        			<td width="50">No</td>
+        			<td width="340">Name</td>
+              <td width="200">Score</td>
+        		</tr>
+            
+
+        	</tbody>
+        </table>
+        <br/><br/>
+        <p class="fontb" style="font-size:10px;">Inspired by Trex | Made with Love by Rudy & Arweave.</p>
+
+    </div>
+
+
+    <div id="offline-resources">
+      <img id="offline-resources-1x" src="images/100-percent/100-offline-sprite.png">
+      <img id="offline-resources-2x" src="images/200-percent/200-offline-sprite.png">
+      <div id="audio-resources">
+        <audio id="offline-sound-press" src="sounds/button-press.mp3"></audio>
+        <audio id="offline-sound-hit" src="sounds/hit.mp3"></audio>
+        <audio id="offline-sound-reached" src="sounds/score-reached.mp3"></audio>
+      </div>
+    </div>
+
+    <input type="file" id="openfiles" onchange="saveSuperWeaveScores(this.files)" hidden>
+
+    <div id="status" class="fontb status" style="display:none;">
+        Saving Score ...
+    </div>
+
+    <div id="statusb" class="fontb status" style="display:none;color:green;">
+        Success.
+    </div>
+
+    <div id="statusc" class="fontb status" style="display:none;color:red;">
+        Failed !
+    </div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="arweave.js"></script>
+    <script src="superweave-runner.js"></script>
+    <script>
+      new Runner('.interstitial-wrapper');
+    </script>
+  </body>
+</html>

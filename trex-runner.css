@@ -1,0 +1,72 @@
+@font-face {
+  font-family: bitFont;
+  src: url(pixeboy.ttf);
+}
+
+@font-face {
+  font-family: pressStart;
+  src: url(PressStart.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+}
+
+.fonta{
+    font-family: bitFont;
+}
+
+.fontb{
+    font-family: pressStart;
+}
+
+.interstitial-wrapper {
+  width: 600px;
+  height: 150px;
+  background-color: white;
+  margin-top: -450px;
+}
+
+
+#offline-resources {
+  display: none;
+}
+
+.runner-container{
+    border: solid 3px black;
+    padding: 10px;
+    float: left;
+    background-color: #4184ff;
+}
+
+.led {
+    display: block;
+    position: absolute;
+    top:55%;
+}
+
+.u{
+  text-decoration: underline;
+}
+
+.but{
+  background-color: white;
+  border: solid;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.but:hover{
+  background-color: white;
+  border: solid 4px;
+}
+
+.status{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
