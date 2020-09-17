@@ -24,11 +24,8 @@ function savename() {
         name = name.slice(0,15);
         sessionStorage.setItem('superweavename', name);
         display('inputname','none');
-        display('inputname','none');
-        display('inputname','none');
-        document.getElementById('inputname').style.display = 'none';
-        document.getElementById('setName').style.display = 'none';
-        document.getElementById('savehighscore').style.display = 'block';
+        display('setName','none');
+        display('savehighscore','block');
         
     }
 }
