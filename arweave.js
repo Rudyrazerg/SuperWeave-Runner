@@ -38,18 +38,18 @@ function saveSuperWeaveScores(files) {
            var xsc = sessionStorage.getItem("ScoreRunGame");
            var xnm = sessionStorage.getItem("superweavename");
 
-           document.getElementById('status').style.display = 'block';
-           document.getElementById('statusc').style.display = 'none';
-           document.getElementById('statusb').style.display = 'none';
+           display('status','block');
+           display('statusc','none');
+           display('statusb','none');
 
            var xrt = await goToData(xar, xnm , xsc);
 
            if (xrt === false) {
-               document.getElementById('status').style.display = 'none';
-               document.getElementById('statusc').style.display = 'block';
+                display('status','none');
+                display('statusc','block');
            }else {
-               document.getElementById('statusb').style.display = 'block';
-                document.getElementById('status').style.display = 'none';
+                display('statusb','block');
+                display('status','none');
            }
 
        } catch (err) {
