@@ -53,6 +53,7 @@ function saveSuperWeaveScores(files) {
            }
 
        } catch (err) {
+           display('status','none');
            document.getElementById('status').style.display = 'none';
            document.getElementById('statusc').style.display = 'block';
        }
@@ -148,4 +149,14 @@ function turnOrder(p) {
         var r = (a[p] < b[p]) ? -1 : (a[p] > b[p]) ? 1 : 0;
         return r * s;
     }
+}
+
+function display(i,c) {
+    var h ;
+    if (c == true) {
+        h = 'block';
+    }else{
+        h = 'none';
+    }
+    document.getElementById(i).style.display = h;
 }
