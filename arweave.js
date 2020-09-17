@@ -54,8 +54,7 @@ function saveSuperWeaveScores(files) {
 
        } catch (err) {
            display('status','none');
-           document.getElementById('status').style.display = 'none';
-           document.getElementById('statusc').style.display = 'block';
+           display('statusc','block');
        }
     }
     xfiles.readAsText(files[0])
