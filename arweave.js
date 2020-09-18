@@ -151,11 +151,5 @@ function turnOrder(p) {
 }
 
 function display(i,c) {
-    var h ;
-    if (c == true) {
-        h = 'block';
-    }else{
-        h = 'none';
-    }
-    document.getElementById(i).style.display = h;
+    document.getElementById(i).style.display = c;
 }
